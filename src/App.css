@@ -1,0 +1,152 @@
+.parentContainer{
+  margin: 30px auto;
+  padding: 20px;
+  width:90%;
+
+  display: flex;              /* 🔥 key */
+  flex-direction: column;   /* 🔥 vertical layout */
+  align-items: center;      /* 🔥 center everything horizontally */
+
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);  
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  color: #6f6c6c;
+}
+
+.parentContainer h1 {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.parentContainer input {
+  padding: 8px;
+  margin-right: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.parentContainer button {
+  padding: 8px 12px;
+}
+
+.cards-wrapper {
+  width: 100%;
+  margin-top: 20px;
+
+  display: flex;            /* 🔥 flex for cards */
+  flex-wrap: wrap;          /* 🔥 wrap to next row */
+  justify-content: center;  /* 🔥 center cards */
+  gap: 20px;
+}
+
+.btn {
+  transition: transform 0.9s ease;
+}
+
+.btn.open {
+  transform: rotate(180deg);
+}
+
+.container{
+  flex: 0 0 300px; 
+  max-width: 300px;
+  padding: 20px;
+    
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);  
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  color: #6f6c6c;
+}
+
+
+.tree-view {
+  margin-top: 20px;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  max-height: 0;
+  opacity: 0;
+}
+
+.tree-view.open {
+  max-height: 1000px; 
+  opacity: 1;
+}
+
+.tree-view.closed {
+  max-height: 0;
+  opacity: 0;
+}
+
+.tree-item {
+   display: flex;
+  align-items: center;
+  margin: 10px 0;
+  position: relative; 
+}
+
+.tree-item::before {
+  content: "";
+  position: absolute;
+  left: 1px;
+  top: 10px;
+  height: 80%;
+  width: 2px;
+  background-color: #aaa;
+} 
+
+.branch {
+  margin-right: 8px;
+  font-weight: bold;
+  color: #444;
+} 
+
+.tree-item img {
+  width: 90px;
+  height: 90px;
+  border-radius: 40%;
+  margin-right: 20px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+
+} 
+
+.text {
+  font-size: 14px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+
+}
+
+
+ .add-btn {
+  border: none;
+  margin: 10px 20px;  
+  display: block;
+  width: 60px;
+  height: 60px;
+  border-radius: 40%;
+  font-size: 28px;
+  background-color: #797d7a;
+  color: rgb(54, 188, 76);
+  cursor: pointer;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+
+} 
+
+.team-btn {
+  border: none;
+  margin: 10px 20px;  
+  display: block;
+  /* width: 100px; */
+  /* height: 60px; */
+  /* border-radius: 50%; */
+  font-size: 15px;
+  /* background-color: #797d7a; */
+  color: rgb(54, 188, 76);
+  cursor: pointer;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+}

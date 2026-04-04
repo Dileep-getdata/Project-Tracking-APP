@@ -1,0 +1,6 @@
+export const employeeDetails = [
+        { id: 1, Name: "Suresh", Role: "Project Manager", level: 1, Image: "https://media.gettyimages.com/id/1369199360/photo/portrait-of-a-handsome-young-businessman-working-in-office.jpg?s=1024x1024&w=gi&k=20&c=z-w-Dr9cnYcYdhTEAFk0zi4l5yhhHQ8LFbzjtYIzp-I=" },
+        { id: 2, Name: "Darshan", Role: "Sr.Software Developer", Image: "https://media.gettyimages.com/id/1424988699/photo/businessman-contemplating-in-the-office-looking-through-the-window.jpg?s=612x612&w=0&k=20&c=ULWlFNUkyF8WCUxIv2oKCalT8N4WBytL5ALQr77jXRA=", level: 2 },
+        { id: 3, Name: "Moulesh", Role: "Jr.Software Devloper", Image: "https://media.gettyimages.com/id/1437931505/photo/businessman-digital-tablet-or-strategy-planning-in-hotel-conference-lobby-or-airport-travel.jpg?s=612x612&w=0&k=20&c=OGRd22Usakx9wHTQsKto0qagIlH38sWDPEmmmXcIBSQ=", level: 2 },
+        { id: 4, Name: "Sethu", Role: "Devops", Image: "https://media.gettyimages.com/id/2012746941/photo/cyber-security-black-man-and-code-reflection-in-eyewear-hacking-and-software-update-in-office.jpg?s=612x612&w=0&k=20&c=6VvcDL6W9mVCXG8TkQEcwrV50dQcw8tJ1xuEGUfmxsc=", level: 2 }
+    ];
