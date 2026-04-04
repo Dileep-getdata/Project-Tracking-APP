@@ -46,11 +46,12 @@ function CardComponent({ teamTitle, employeeDetails }) {
 
         <div className="container">
             {console.log('Line2', teamTitle)}
-            <h3>{teamTitle}</h3>
-            <button className="btn" onClick={() => setShowCard(!showCard)}>
-                {showCard ? "-" : "\u2193"}
+            {/* <h3>{teamTitle}</h3> */}
+            <button className={`btn ${showCard ? "open" : ""}`} onClick={() => setShowCard(!showCard)}>
+                {/* {showCard ? "-" : "\u2193"} */}
+                {teamTitle}
             </button>
-            {showCard && (<div className={`tree-view ${showCard ? "open" : "closed"}`}>
+            <div className={`tree-view ${showCard ? "open" : "closed"}`}>
                 {[...employes]
                     .sort((a, b) => a.level - b.level)
                     .map((emp) => (
@@ -70,10 +71,10 @@ function CardComponent({ teamTitle, employeeDetails }) {
                             </span>
                         </div>
                     ))}
-                <button className="add-btn" onClick={() => setShowForm(true)}>
+                <button className="add-btn hideBtn" onClick={() => setShowForm(true)}>
                     +
                 </button>
-            </div>)}
+            </div>
 
             {
                 showForm && (<div style={{ marginTop: "10px" }}>
@@ -102,7 +103,7 @@ function CardComponent({ teamTitle, employeeDetails }) {
                         value={role}
                         onChange={(e) => setRole(e.target.value)}
                     />
-                    <button onClick={handleAddEmployee}>Add</button>
+                    <button className='add-btn' onClick={handleAddEmployee}>+Add</button>
 
                 </div>)
 

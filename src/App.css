@@ -1,19 +1,28 @@
-.parentContainer{
+     
+  /* color: #6f6c6c; */
+.mainPage{
+  background-color: rgb(249, 247, 247);
+}
+
+.parentContainer {
   margin: 30px auto;
   padding: 20px;
-  width:90%;
+  width: 90%;
 
-  display: flex;              /* 🔥 key */
-  flex-direction: column;   /* 🔥 vertical layout */
-  align-items: center;      /* 🔥 center everything horizontally */
-
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);  
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(
+    135deg,
+    rgba(29, 6, 133, 0.837),
+    rgba(39, 29, 98, 0.268)
+  );  
+  backdrop-filter: blur(14px);           
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 15px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-  color: #6f6c6c;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25); 
+  color: #f2e4d2; 
 }
 
 .parentContainer h1 {
@@ -21,12 +30,30 @@
   text-align: center;
 }
 
-.parentContainer input {
-  padding: 8px;
+ .parentContainer input[type=text], .parentContainer input[type=number] { 
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 3px solid #555;
+  transition: 0.5s;
+  outline: none;
+  color: #f2e4d2; 
+  background-color: rgba(39, 29, 98, 0.268);
+}
+
+.parentContainer input::placeholder {
+  color: rgb(48, 46, 46);
+}
+
+.parentContainer input[type=text]:focus, .parentContainer input[type=number]:focus {
+  border: 3px solid #ccc;
+}
+  /* padding: 8px;
   margin-right: 10px;
   border-radius: 5px;
-  border: 1px solid #ccc;
-}
+  border: 2px solid #ccc; */
+ 
 
 .parentContainer button {
   padding: 8px 12px;
@@ -35,40 +62,52 @@
 .cards-wrapper {
   width: 100%;
   margin-top: 20px;
-
-  display: flex;            /* 🔥 flex for cards */
-  flex-wrap: wrap;          /* 🔥 wrap to next row */
-  justify-content: center;  /* 🔥 center cards */
+  display: flex;           
+  flex-wrap: wrap;          
+  justify-content: center;  
   gap: 20px;
 }
 
 .btn {
-  transition: transform 0.9s ease;
+  transition: transform 1s ease, border-radius 0.3s ease;
+  border-radius: 15px;
+  border: none;
+  background-color: rgba(39, 29, 98, 0.181);
+  color: #f2e4d2;
+  font-weight:bold;
+  font-size: medium;
+}
+.btn:hover{
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: rgba(39, 29, 98, 0.268);
+
 }
 
 .btn.open {
-  transform: rotate(180deg);
+  /* transform: rotate(360deg); */
+    transform: rotateX(360deg);
+
 }
 
-.container{
-  flex: 0 0 300px; 
+
+.container {
+  flex: 0 0 300px;
   max-width: 300px;
   padding: 20px;
-    
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);  
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+
+  background: rgba(255, 255, 255, 0.08);  
+  border: 1px solid rgba(255, 255, 255, 0.2); 
   border-radius: 15px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-  color: #6f6c6c;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15); 
+  color: #f2e4d2; 
 }
 
 
 .tree-view {
   margin-top: 20px;
   overflow: hidden;
-  transition: all 0.4s ease;
+  transition: all 2s ease;
   max-height: 0;
   opacity: 0;
 }
@@ -76,6 +115,7 @@
 .tree-view.open {
   max-height: 1000px; 
   opacity: 1;
+
 }
 
 .tree-view.closed {
@@ -125,28 +165,56 @@
  .add-btn {
   border: none;
   margin: 10px 20px;  
-  display: block;
-  width: 60px;
-  height: 60px;
-  border-radius: 40%;
-  font-size: 28px;
-  background-color: #797d7a;
-  color: rgb(54, 188, 76);
+  /* display: block; */
+  /* width: 50px;
+  height: 50px; */
+  /* border-radius: 30%; */
+  font-size: 20px;
+  font-weight: bolder;
+  background: linear-gradient(
+    135deg,
+    rgba(29, 6, 133, 0.837),
+    rgba(39, 29, 98, 0.268)
+  );  
+  color: #f2e4d2;
   cursor: pointer;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
-
+  transition: background-color 0.2s ease;
 } 
 
+.hideBtn {
+  cursor: pointer;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.hideBtn:active {
+  transform: scale(0.95);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.add-btn:hover{
+    background-color: white;
+
+}
+
+
 .team-btn {
+  transition: transform 1s ease, border-radius 0.3s ease;
+  /* border-radius: 10px; */
   border: none;
   margin: 10px 20px;  
   display: block;
-  /* width: 100px; */
-  /* height: 60px; */
-  /* border-radius: 50%; */
   font-size: 15px;
-  /* background-color: #797d7a; */
-  color: rgb(54, 188, 76);
+  font-weight:bold;
+  background-color: rgba(39, 29, 98, 0.181);
+  color: #f2e4d2;
   cursor: pointer;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+}
+
+.team-btn:hover{
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: rgba(39, 29, 98, 0.268);
+
 }

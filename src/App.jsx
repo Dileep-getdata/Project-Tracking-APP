@@ -9,10 +9,10 @@ function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <>
-     <h1>Team Trees</h1>
+    <div className='mainPage'>
+     <h1>Team Play</h1>
      <ParentCardComponent/>
-    </>
+    </div>
   )
 }
 
