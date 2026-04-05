@@ -1,5 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 function CardComponent({ teamTitle, employeeDetails }) {
     const [employes, setEmployes] = useState(employeeDetails);
@@ -8,7 +9,6 @@ function CardComponent({ teamTitle, employeeDetails }) {
     const [role, setRole] = useState("");
     const [image, setImage] = useState("");
     const [showCard, setShowCard] = useState(true);
-
     const [showForm, setShowForm] = useState(false);
 
 
@@ -49,7 +49,7 @@ function CardComponent({ teamTitle, employeeDetails }) {
             {/* <h3>{teamTitle}</h3> */}
             <button className={`btn ${showCard ? "open" : ""}`} onClick={() => setShowCard(!showCard)}>
                 {/* {showCard ? "-" : "\u2193"} */}
-                {teamTitle}
+                {teamTitle +` ${showCard ? "-" : "\u2193"} `}
             </button>
             <div className={`tree-view ${showCard ? "open" : "closed"}`}>
                 {[...employes]
@@ -65,10 +65,13 @@ function CardComponent({ teamTitle, employeeDetails }) {
                             {emp.Image && (
                                 <img src={emp.Image} alt={emp.Name} />
                             )}
+                            <a href={`/employee/${emp.id}`} target="_blank" rel="noopener noreferrer"   className="text-link"
+>
 
                             <span className="text">
                                 {emp.Name} ({emp.Role})
                             </span>
+                            </a>
                         </div>
                     ))}
                 <button className="add-btn hideBtn" onClick={() => setShowForm(true)}>
