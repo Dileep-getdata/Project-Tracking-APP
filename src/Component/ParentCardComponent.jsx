@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react'
 import CardComponent from './CardComponent';
-import { employeeDetails } from "../Data";
+import { employeeDetails,employeeDetails1 } from "../Data";
 
 
 function ParentCardComponent() {
     const [cards, setCards] = useState([
-        { id: 1, title: "New Project", employees: employeeDetails }
+        { id: 1, title: "New Project", employees: employeeDetails },
+        { id: 2, title: "New Project1", employees: employeeDetails1 }
+
     ]);
     const [showForm, setShowForm] = useState(false);
     const [title, setTitle] = useState("");
@@ -28,7 +30,7 @@ function ParentCardComponent() {
             }}>
                 <input
                     type="text"
-                    placeholder={`+ New Project`}
+                    placeholder={`+ New Project Title`}
                     value={title}
                     onChange={(e) => setTitle(e.target.value)}
                 />
@@ -40,7 +42,9 @@ function ParentCardComponent() {
                 {cards.map((card) => {
                     return (<div key={card.id} style={{ marginTop: "20px" }}>
                         {console.log('Line1', card.title)}
-                        <CardComponent teamTitle={card.title} employeeDetails={card.employees} />
+                        <div key={card.id} className="card-item">
+                            <CardComponent teamTitle={card.title} employeeDetails={card.employees} />
+                        </div>
                     </div>
                     )
                 })}

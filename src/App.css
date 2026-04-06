@@ -23,11 +23,26 @@
   border-radius: 15px;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25); 
   color: #f2e4d2; 
+    
 }
+
+
 
 .parentContainer h1 {
   margin-bottom: 15px;
   text-align: center;
+  animation: headingAnim 1s ease-out;
+}
+
+@keyframes headingAnim {
+  from {
+    transform: scale(2);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
  .parentContainer input[type=text], .parentContainer input[type=number] { 
@@ -39,7 +54,7 @@
   transition: 0.5s;
   outline: none;
   color: #f2e4d2; 
-  background-color: rgba(39, 29, 98, 0.268);
+  background-color: rgba(192, 190, 205, 0.268);
 }
 
 .parentContainer input::placeholder {
@@ -66,6 +81,22 @@
   flex-wrap: wrap;          
   justify-content: center;  
   gap: 20px;
+}
+
+.card-item{
+  animation: cardScaleIn 0.8s ease-out;
+  /* animation-fill-mode: both; */
+}
+
+@keyframes cardScaleIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 .btn {
@@ -107,20 +138,24 @@
 .tree-view {
   margin-top: 20px;
   overflow: hidden;
-  transition: all 2s ease;
+  transition: all 1s ease;
   max-height: 0;
   opacity: 0;
+  transform: translateY(-50px);
+  transition: all 1.5s ease;
 }
 
 .tree-view.open {
   max-height: 1000px; 
-  opacity: 1;
-
+  opacity: 1;  
+  transform: translateY(0);
 }
+
 
 .tree-view.closed {
   max-height: 0;
   opacity: 0;
+  transform: translateY(-60px);
 }
 
 .tree-item {
@@ -168,7 +203,7 @@
   /* display: block; */
   /* width: 50px;
   height: 50px; */
-  /* border-radius: 30%; */
+  border-radius: 10%;
   font-size: 20px;
   font-weight: bolder;
   background: linear-gradient(

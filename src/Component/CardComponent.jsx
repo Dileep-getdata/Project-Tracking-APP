@@ -8,7 +8,7 @@ function CardComponent({ teamTitle, employeeDetails }) {
     const [level, setLevel] = useState("");
     const [role, setRole] = useState("");
     const [image, setImage] = useState("");
-    const [showCard, setShowCard] = useState(true);
+    const [showCard, setShowCard] = useState(false);
     const [showForm, setShowForm] = useState(false);
 
 
@@ -58,7 +58,7 @@ function CardComponent({ teamTitle, employeeDetails }) {
                         <div
                             key={emp.id}
                             className="tree-item"
-                            style={{ marginLeft: `${(emp.level - 1) * 50}px` }}
+                            style={{ marginLeft: `${(emp.level - 1) * 30}px` }}
                         >
                             {emp.level > 1 && <span className="branch"> --</span>}
 

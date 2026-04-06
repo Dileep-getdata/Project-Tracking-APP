@@ -4,3 +4,9 @@ export const employeeDetails = [
         { id: 3, Name: "Moulesh", Role: "Jr.Software Devloper", Image: "https://media.gettyimages.com/id/1437931505/photo/businessman-digital-tablet-or-strategy-planning-in-hotel-conference-lobby-or-airport-travel.jpg?s=612x612&w=0&k=20&c=OGRd22Usakx9wHTQsKto0qagIlH38sWDPEmmmXcIBSQ=", level: 2 },
         { id: 4, Name: "Sethu", Role: "Devops", Image: "https://media.gettyimages.com/id/2012746941/photo/cyber-security-black-man-and-code-reflection-in-eyewear-hacking-and-software-update-in-office.jpg?s=612x612&w=0&k=20&c=6VvcDL6W9mVCXG8TkQEcwrV50dQcw8tJ1xuEGUfmxsc=", level: 2 }
     ];
+export const employeeDetails1 = [
+        { id: 1, Name: "Kriti", Role: "Project Manager", level: 1, Image: "https://media.istockphoto.com/id/1215917791/photo/portrait-of-young-businesswoman-working-on-a-laptop-at-the-office.jpg?s=612x612&w=0&k=20&c=sSgeFKywqDX0pmvlc_stAQCpACb5LdjAxYkPgxHVvkw=" },
+        { id: 2, Name: "Ramya", Role: "Sr.Software Developer", Image: "https://media.istockphoto.com/id/1447567492/photo/happy-female-ceo-in-front-of-her-business-team-in-the-office-looking-at-camera.jpg?s=612x612&w=0&k=20&c=k3UeK-z_HWXJPRFSQuX-TA29Wr_yduInUslGLBcBQXk=", level: 2 },
+        { id: 3, Name: "Guru", Role: "Jr.Software Devloper", Image: "https://media.istockphoto.com/id/2059963058/photo/remote-work-from-home-video-call-and-man-with-a-laptop-internet-connection-or-conference-call.jpg?s=1024x1024&w=is&k=20&c=Xlm_uAqqa5xiaqTqMjXOflpVINkXPCb332fl6dgg3SM=", level: 3 },
+        { id: 4, Name: "Seenu", Role: "Devops", Image: "https://media.istockphoto.com/id/1452051132/photo/portrait-of-a-successful-man-at-cozy-home-office.jpg?s=1024x1024&w=is&k=20&c=LUe0RbZAbQZLGzzfYYvsFj-dZuiJ8pGIj5vmL8BPv2I=", level: 3 }
+    ];
